@@ -1,0 +1,241 @@
+<html>
+<head>
+                <link rel="stylesheet" type="text/css" href="./obj.css">
+
+    </head>
+    <body>
+        <h1>&nbsp;Online Objective Assesment</h1>
+        <div id="style">
+         
+        <label>SELECT THE CO's ADDRESSED:</label><br>
+            <label><input type='checkbox' onclick='handleClick1();' id="co1click">CO1</label>
+            <label><input type='checkbox' onclick='handleClick2();' id="co2click">CO2</label>
+            <label><input type='checkbox' onclick='handleClick3();' id="co3click">CO3</label>
+            <label><input type='checkbox' onclick='handleClick4();' id="co4click">CO4</label>
+            <label><input type='checkbox' onclick='handleClick5();' id="co5click">CO5</label>
+            <label><input type='checkbox' onclick='handleClick6();' id="co6click">CO6</label>
+            <label><input type='checkbox' onclick='handleClick7();' id="co7click">CO7</label>
+            <div id="inner">
+        <form id="OBJ">
+            <label><div id=co1m>CO1: Maximum marks:<input name="co1maxmark" type="number"  id="co1maxmark"/></div></label>
+            <label><div id=co2m>CO2: Maximum marks:<input name="co2maxmark" type="number"  id="co2maxmark"/></div></label>
+            <label><div id=co3m>CO3: Maximum marks:<input name="co3maxmark" type="number"  id="co3maxmark"/></div></label>
+           <label> <div id=co4m>CO4: Maximum marks:<input name="co4maxmark" type="number"  id="co4maxmark"/></div></label>
+            <label><div id=co5m>CO5: Maximum marks:<input name="co5maxmark" type="number"  id="co5maxmark"/></div></label>
+            <label><div id=co6m>CO6: Maximum marks:<input name="co6maxmark" type="number"  id="co6maxmark"/></div></label>
+            <label><div id=co7m>CO7: Maximum marks:<input name="co7maxmark" type="number"  id="co7maxmark"/></div></label><br>
+            <a href='#' 
+        onclick='selectthefilenam()'
+    ><input type="button" value="Submit" id="show1"/>
+</a><br>
+        <input type="button" value="Enter student Marks" onclick="enterobjmarks()" id="show2"/>
+            </form>
+        <form id="stuobj">
+     <label>NAME:<input name="searchTxt" type="text"  id="objname" placeholder="Enter the name" label="Name" class="searchField" style="text-transform:capitalize" required title="NAME" /></label>
+    <label>ROLL NO:<input name="rollno" type="text" id="objrollno" class="rollno" title="Register-No" required /></label><br><br>
+    <label><div id=co1a>CO1: Marks obtained:<input name="co1mark" type="number"  id="co1mark"/></div></label>
+            <label><div id=co2a>CO2: Marks obtained:<input name="co2mark" type="number"  id="co2mark"/></div></label>
+            <label><div id=co3a>CO3: Marks obtained:<input name="co3mark" type="number"  id="co3mark"/></div></label>
+            <label><div id=co4a>CO4: Marks obtained:<input name="co4mark" type="number"  id="co4mark"/></div></label>
+            <label><div id=co5a>CO5: Marks obtained:<input name="co5mark" type="number"  id="co5mark"/></div></label>
+           <label><div id=co6a>CO6: Marks obtained:<input name="co6mark" type="number"  id="co6mark"/></div></label>
+            <label><div id=co7a>CO7: Marks obtained:<input name="co7mark" type="number"  id="co7mark"/></div></label>
+    <a href='#' 
+        onclick='selectanotherfilenam()' id="show4"
+    >Submit</a><br>
+    <input type="reset" onclick="reset()" value="Next student" id="show3" />
+            </form>
+        </div>
+        </div>
+    </body>
+</html>
+
+
+
+
+<script>
+    document.getElementById("OBJ").style.visibility="hidden";
+document.getElementById("stuobj").style.visibility="hidden";
+    var nam="obj";
+    var subject=localStorage.getItem('subject');
+    var classnam=localStorage.getItem('class');
+    var year=localStorage.getItem('year');
+    var filenam="aaa"+"_"+subject+"_"+classnam+"_"+year+"_"+nam+".csv";
+    var anotherfilenam="ans"+"_"+subject+"_"+classnam+"_"+year+"_"+nam+".csv";
+    function selectthefilenam()
+    {
+        download1stCSV({ filename: filenam });
+    }
+    function selectanotherfilenam()
+    {
+        download2ndCSV({ filename: anotherfilenam });
+    }
+      function handleClick1()
+    {
+        document.getElementById("co1m").style.visibility="visible";
+        document.getElementById("show1").style.visibility="visible";
+        document.getElementById("show2").style.visibility="visible";
+    }
+    function handleClick2()
+    {
+        document.getElementById("co2m").style.visibility="visible";
+        document.getElementById("show1").style.visibility="visible";
+        document.getElementById("show2").style.visibility="visible";
+
+    }
+    function handleClick3()
+    {
+        document.getElementById("co3m").style.visibility="visible";
+        document.getElementById("show1").style.visibility="visible";
+        document.getElementById("show2").style.visibility="visible";
+    }
+    function handleClick4()
+    {
+        document.getElementById("co4m").style.visibility="visible";
+        document.getElementById("show1").style.visibility="visible";
+        document.getElementById("show2").style.visibility="visible";
+    }
+    function handleClick5()
+    {
+        document.getElementById("co5m").style.visibility="visible";
+        document.getElementById("show1").style.visibility="visible";
+        document.getElementById("show2").style.visibility="visible";
+    }
+    function handleClick6()
+    {
+        document.getElementById("co6m").style.visibility="visible";
+        document.getElementById("show1").style.visibility="visible";
+        document.getElementById("show2").style.visibility="visible";
+    }
+    function handleClick7()
+    {
+        document.getElementById("co7m").style.visibility="visible";
+        document.getElementById("show1").style.visibility="visible";
+        document.getElementById("show2").style.visibility="visible";
+    }
+    function enterobjmarks()
+    {
+        document.getElementById("stuobj").style.visibility="visible";
+        document.getElementById("co1a").style.visibility="hidden";
+         document.getElementById("co2a").style.visibility="hidden";
+         document.getElementById("co3a").style.visibility="hidden";
+         document.getElementById("co4a").style.visibility="hidden";
+         document.getElementById("co5a").style.visibility="hidden";
+         document.getElementById("co6a").style.visibility="hidden";
+         document.getElementById("co7a").style.visibility="hidden";
+        var co1clickvalue=document.getElementById("co1maxmark").value;
+        if(co1clickvalue>0)
+            document.getElementById("co1a").style.visibility="visible";
+        var co2clickvalue=document.getElementById("co2maxmark").value;
+        if(co2clickvalue>0)
+            document.getElementById("co2a").style.visibility="visible";
+        var co3clickvalue=document.getElementById("co3maxmark").value;
+        if(co3clickvalue>0)
+            document.getElementById("co3a").style.visibility="visible";
+        var co4clickvalue=document.getElementById("co4maxmark").value;
+        if(co4clickvalue>0)
+            document.getElementById("co4a").style.visibility="visible";
+        var co5clickvalue=document.getElementById("co5maxmark").value;
+        if(co5clickvalue>0)
+            document.getElementById("co5a").style.visibility="visible";
+        var co6clickvalue=document.getElementById("co6maxmark").value;
+        if(co6clickvalue>0)
+            document.getElementById("co6a").style.visibility="visible";
+        var co7clickvalue=document.getElementById("co7maxmark").value;
+        if(co7clickvalue>0)
+            document.getElementById("co7a").style.visibility="visible";
+
+    }
+    function download1stCSV(args) {  
+        var data, filename, link;
+        var csv = convertArrayOfObjectsToCSV({
+            data: [  
+        {
+            CO1: parseFloat(document.getElementById("co1maxmark").value),
+            CO2: parseFloat(document.getElementById("co2maxmark").value),
+            CO3: parseFloat(document.getElementById("co3maxmark").value),
+            CO4: parseFloat(document.getElementById("co4maxmark").value),
+            CO5: parseFloat(document.getElementById("co5maxmark").value),
+            CO6: parseFloat(document.getElementById("co6maxmark").value),
+            CO7: parseFloat(document.getElementById("co7maxmark").value),
+        },
+    ]
+        });
+        if (csv == null) return;
+
+        filename = args.filename || 'export.csv';
+
+        if (!csv.match(/^data:text\/csv/i)) {
+            csv = 'data:text/csv;charset=utf-8,' + csv;
+        }
+        data = encodeURI(csv);
+
+        link = document.createElement('a');
+        link.setAttribute('href', data);
+        link.setAttribute('download', filename);
+        link.click();
+    }
+      function download2ndCSV(args) {  
+        var data, filename, link;
+        var csv = convertArrayOfObjectsToCSV({
+            data: [  
+        {
+            NAME: (document.getElementById("objname").value),
+            ROLLNO: (document.getElementById("objrollno").value),
+            CO1: parseFloat(document.getElementById("co1mark").value),
+            CO2: parseFloat(document.getElementById("co2mark").value),
+            CO3: parseFloat(document.getElementById("co3mark").value),
+            CO4: parseFloat(document.getElementById("co4mark").value),
+            CO5: parseFloat(document.getElementById("co5mark").value),
+            CO6: parseFloat(document.getElementById("co6mark").value),
+            CO7: parseFloat(document.getElementById("co7mark").value),
+        },
+    ]
+        });
+        if (csv == null) return;
+
+        filename = args.filename || 'export.csv';
+
+        if (!csv.match(/^data:text\/csv/i)) {
+            csv = 'data:text/csv;charset=utf-8,' + csv;
+        }
+        data = encodeURI(csv);
+
+        link = document.createElement('a');
+        link.setAttribute('href', data);
+        link.setAttribute('download', filename);
+        link.click();
+    }
+function convertArrayOfObjectsToCSV(args) {  
+        var result, ctr, keys, columnDelimiter, lineDelimiter, data;
+
+        data = args.data || null;
+        if (data == null || !data.length) {
+            return null;
+        }
+
+        columnDelimiter = args.columnDelimiter || ',';
+        lineDelimiter = args.lineDelimiter || '\n';
+
+        keys = Object.keys(data[0]);
+
+        result = '';
+        result += keys.join(columnDelimiter);
+        result += lineDelimiter;
+
+        data.forEach(function(item) {
+            ctr = 0;
+            keys.forEach(function(key) {
+                if (ctr > 0) result += columnDelimiter;
+
+                result += item[key];
+                ctr++;
+            });
+            result += lineDelimiter;
+        });
+
+        return result;
+    }
+  
+  
+</script>

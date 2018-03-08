@@ -1,0 +1,85 @@
+body {
+  background-color: white;
+}
+h1 {
+  text-transform: uppercase;
+  font-family: 'Questrial', sans-serif;
+  font-size: 18.4px;
+  color: #101010;
+  letter-spacing: 10px;
+  text-align: -webkit-center;
+}
+h1:hover {
+  color: #eb018a;
+}
+#style {
+  background-color: #eb018a;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+#style  form{
+  padding: 30px;
+  padding-top: 0px;
+  font-family: "Campton Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-left: 300px;
+}
+#style label {
+  font-family: "Kelson-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 16px;
+}
+#obj{
+	margin-left: 200px;
+  margin-right: 200px;
+}
+#show2 {
+	margin-left: 120px;
+  color: blue;
+  padding: 3px;
+  cursor: pointer;
+}
+#show1 {
+	margin-left: 150px;
+  color: blue;
+  padding: 3px;
+  cursor: pointer;
+}
+#show3 {
+	margin-left: 135px;
+  color: blue;
+  padding: 3px;
+  cursor: pointer;
+}
+#show1:hover {
+  background-color: white;
+  color: #eb018a;
+  border-color: white;
+}
+#show2:hover {
+  background-color: white;
+  color: #eb018a;
+  border-color: white;
+}
+#show3:hover {
+  background-color: white;
+  color: #eb018a;
+  border-color: white;
+}
+#show4{
+		margin-left: 150px;
+
+}
+a {
+  color: black;
+}
+a:hover {
+  color: darkblue;
+}
+#selection{
+  margin-left:590px;
+  font-size: 20px;
+  color: black;
+}
+#selection:hover{
+color: deeppink;
+}

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>PSR -Entry</title>
+        <link rel="stylesheet" type="text/css" href="./psr.css">
+    </head>
+    <body>
+        <h1>PSR Mark Entry</h1>
+        <div id="maindiv">
+        <form id="psrform1">
+         <label>NAME  </label><input name="searchTxt" type="text"  id="searchTxt" placeholder="Enter the name" label="Name" class="searchField" style="text-transform:capitalize" /><br><br>     </form>
+    <form><label>ROLL NO  </label><input name="rollno" type="number" id="rollno" class="rollno" placeholder="Enter the register number" value=0 /><br><br></form>
+                <form id="psrform2">
+            <label>SELECT THE CO ADDRESSED  </label><select name="CO" id="selectco" class="COs">
+		   <option value="CO1">CO1</option>
+		   <option value="CO2">CO2</option>
+		   <option value="CO3">CO3</option>
+		   <option value="CO4">CO4</option>
+		   <option value="CO5">CO5</option>
+		   <option value="CO6">CO6</option>
+		   <option value="CO7">CO7</option>
+		   </select>
+            <input name="psrvalue" type="number" id="psrvalue" max="50" /><br><br>
+            <a href='#' 
+        onclick='selectthefunc()'>Submit</a><br><br>
+                    <a href='psr.php'>DONE</a>
+            <br>
+            </form>
+        </div>
+    </body>
+</html>
+
+
+
+<script>
+
+    var nam="psr";
+    var subject=localStorage.getItem('subject');
+    var classnam=localStorage.getItem('class');
+    var year=localStorage.getItem('year');
+    var filenam=subject+"_"+classnam+"_"+year+"_"+nam+".csv";
+   
+    function selectthefunc()
+    {
+        var get=parseFloat(document.getElementById("rollno").value);
+        localStorage.setItem('rollno',get);
+        var ans=document.getElementById("selectco").value;
+        if(ans=="CO1")
+            download1CSV({ filename: filenam });
+        else if(ans=="CO2")
+            download2CSV({ filename: filenam });
+        else if(ans=="CO3")
+            download3CSV({ filename: filenam });
+        else if(ans=="CO4")
+            download4CSV({ filename: filenam });
+        else if(ans=="CO5")
+            download5CSV({ filename: filenam });
+        else if(ans=="CO6")
+            download6CSV({ filename: filenam });
+        else if(ans=="CO7")
+            download7CSV({ filename: filenam });
+        document.getElementById("rollno").value=parseFloat(localStorage.getItem('rollno'))+1;
+        document.getElementById("psrform1").reset();
+        document.getElementById("psrform2").reset();
+    }
+    
+     function convertArrayOfObjectsToCSV(args) {  
+        var result, ctr, keys, columnDelimiter, lineDelimiter, data;
+
+        data = args.data || null;
+        if (data == null || !data.length) {
+            return null;
+        }
+
+        columnDelimiter = args.columnDelimiter || ',';
+        lineDelimiter = args.lineDelimiter || '\n';
+
+        keys = Object.keys(data[0]);
+
+        result = '';
+        result += keys.join(columnDelimiter);
+        result += lineDelimiter;
+
+        data.forEach(function(item) {
+            ctr = 0;
+            keys.forEach(function(key) {
+                if (ctr > 0) result += columnDelimiter;
+
+                result += item[key];
+                ctr++;
+            });
+            result += lineDelimiter;
+        });
+
+        return result;
+    }
+            function download1CSV(args) {  
+        var data, filename, link;
+        var csv = convertArrayOfObjectsToCSV({
+            data: [  
+        {
+            NAME: document.getElementById("searchTxt").value,
+            ROLLNO: document.getElementById("rollno").value,
+            CO1:  document.getElementById("psrvalue").value,
+            CO2: "",
+            CO3: "",
+            CO4: "",
+            CO5: "",
+            CO6: "",
+            CO7: ""   },
+    ]
+        }); 
+        if (csv == null) return;
+
+        filename = args.filename || 'export.csv';
+
+        if (!csv.match(/^data:text\/csv/i)) {
+            csv = 'data:text/csv;charset=utf-8,' + csv;
+        }
+        data = encodeURI(csv);
+
+        link = document.createElement('a');
+        link.setAttribute('href', data);
+        link.setAttribute('download', filename);
+        link.click();
+    }
+     function download2CSV(args) {  
+        var data, filename, link;
+        var csv = convertArrayOfObjectsToCSV({
+            data: [  
+        {
+            NAME: document.getElementById("searchTxt").value,
+            ROLLNO: document.getElementById("rollno").value,
+            CO1: "",
+            CO2:  document.getElementById("psrvalue").value,
+            CO3: "",
+            CO4: "",
+            CO5: "",
+            CO6: "",
+            CO7: ""     },
+    ]
+        });
+        if (csv == null) return;
+
+        filename = args.filename || 'export.csv';
+
+        if (!csv.match(/^data:text\/csv/i)) {
+            csv = 'data:text/csv;charset=utf-8,' + csv;
+        }
+        data = encodeURI(csv);
+
+        link = document.createElement('a');
+        link.setAttribute('href', data);
+        link.setAttribute('download', filename);
+        link.click();
+    }
+     function download3CSV(args) {  
+        var data, filename, link;
+        var csv = convertArrayOfObjectsToCSV({
+            data: [  
+        {
+            NAME: document.getElementById("searchTxt").value,
+            ROLLNO: document.getElementById("rollno").value,
+            CO1: "",
+            CO2: "",
+            CO3:  document.getElementById("psrvalue").value,
+            CO4: "",
+            CO5: "",
+            CO6: "",
+            CO7: ""     },
+    ]
+        });
+        if (csv == null) return;
+
+        filename = args.filename || 'export.csv';
+
+        if (!csv.match(/^data:text\/csv/i)) {
+            csv = 'data:text/csv;charset=utf-8,' + csv;
+        }
+        data = encodeURI(csv);
+
+        link = document.createElement('a');
+        link.setAttribute('href', data);
+        link.setAttribute('download', filename);
+        link.click();
+    }   
+function download4CSV(args) {  
+        var data, filename, link;
+        var csv = convertArrayOfObjectsToCSV({
+            data: [  
+        {
+            NAME: document.getElementById("searchTxt").value,
+            ROLLNO: document.getElementById("rollno").value,
+            CO1: "",
+            CO2: "",
+            CO3: "",
+            CO4:  document.getElementById("psrvalue").value,
+            CO5: "",
+            CO6: "",
+            CO7: ""     },
+    ]
+        });
+        if (csv == null) return;
+
+        filename = args.filename || 'export.csv';
+
+        if (!csv.match(/^data:text\/csv/i)) {
+            csv = 'data:text/csv;charset=utf-8,' + csv;
+        }
+        data = encodeURI(csv);
+
+        link = document.createElement('a');
+        link.setAttribute('href', data);
+        link.setAttribute('download', filename);
+        link.click();
+    }
+    
+    function download5CSV(args) {  
+        var data, filename, link;
+        var csv = convertArrayOfObjectsToCSV({
+            data: [  
+        {
+            NAME: document.getElementById("searchTxt").value,
+            ROLLNO: document.getElementById("rollno").value,
+            CO5: "",
+            CO2: "",
+            CO3: "",
+            CO4: "",
+            CO5:  document.getElementById("psrvalue").value,
+            CO6: "",
+            CO7: ""     },
+    ]
+        });
+        if (csv == null) return;
+
+        filename = args.filename || 'export.csv';
+
+        if (!csv.match(/^data:text\/csv/i)) {
+            csv = 'data:text/csv;charset=utf-8,' + csv;
+        }
+        data = encodeURI(csv);
+
+        link = document.createElement('a');
+        link.setAttribute('href', data);
+        link.setAttribute('download', filename);
+        link.click();
+    }
+    function download6CSV(args) {  
+        var data, filename, link;
+        var csv = convertArrayOfObjectsToCSV({
+            data: [  
+        {
+            NAME: document.getElementById("searchTxt").value,
+            ROLLNO: document.getElementById("rollno").value,
+            CO1: "",
+            CO2: "",
+            CO3: "",
+            CO4: "",
+            CO5: "",
+            CO6:  document.getElementById("psrvalue").value,
+            CO7: ""     },
+    ]
+        });
+        if (csv == null) return;
+
+        filename = args.filename || 'export.csv';
+
+        if (!csv.match(/^data:text\/csv/i)) {
+            csv = 'data:text/csv;charset=utf-8,' + csv;
+        }
+        data = encodeURI(csv);
+
+        link = document.createElement('a');
+        link.setAttribute('href', data);
+        link.setAttribute('download', filename);
+        link.click();
+    }
+    function download7CSV(args) {  
+        var data, filename, link;
+        var csv = convertArrayOfObjectsToCSV({
+            data: [  
+        {
+            NAME: document.getElementById("searchTxt").value,
+            ROLLNO: document.getElementById("rollno").value,
+            CO1: "",
+            CO2: "",
+            CO3: "",
+            CO4: "",
+            CO5: "",
+            CO6: "",
+            CO7:  document.getElementById("psrvalue").value     },
+    ]
+        });
+        if (csv == null) return;
+
+        filename = args.filename || 'export.csv';
+
+        if (!csv.match(/^data:text\/csv/i)) {
+            csv = 'data:text/csv;charset=utf-8,' + csv;
+        }
+        data = encodeURI(csv);
+
+        link = document.createElement('a');
+        link.setAttribute('href', data);
+        link.setAttribute('download', filename);
+        link.click();
+    }
+</script>

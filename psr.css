@@ -1,0 +1,39 @@
+body {
+  background-color: white;
+  padding: 10px;
+}
+#maindiv{
+  background-color: #eb018a;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+#maindiv  form{
+	padding-bottom: 10px;
+  padding-top: 20px;
+  font-family: "Campton Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-left: 300px;
+}
+#maindiv label {
+  font-family: "Kelson-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 16px;
+}
+h1 {
+  text-transform: uppercase;
+  font-family: 'Questrial', sans-serif;
+  font-size: 18.4px;
+  color: #101010;
+  letter-spacing: 10px;
+  text-align: -webkit-center;
+}
+h1:hover {
+  color: #eb018a;
+}
+a {
+  color: black;
+  margin-left: 200px;
+    
+}
+a:hover {
+  color: darkblue;
+}

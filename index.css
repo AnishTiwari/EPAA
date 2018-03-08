@@ -1,0 +1,77 @@
+body {
+  background-color: white;
+}
+#style {
+  background-color: #eb018a;
+  margin-left: 200px;
+  margin-right: 200px;
+  height: 500px;
+}
+#style form {
+  margin-top: 20px;
+  padding: 50px;
+  padding-bottom: 0px;
+  font-family: "Campton Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-left: 300px;
+}
+#style form label {
+  font-family: "Kelson-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 16px;
+    font-weight: 500;
+}
+h1 {
+  text-transform: uppercase;
+  font-family: 'Questrial', sans-serif;
+  font-size: 18.4px;
+  color: #101010;
+  letter-spacing: 10px;
+    font-weight: 600;
+  text-align: -webkit-center;
+}
+h1:hover {
+  color: #eb018a;
+}
+input,
+select {
+  font-stretch: 100%;
+  color: darkred;
+  background-color: white;
+  font-weight: 400;
+  margin-left: 10px;
+  border: 10px;
+  padding: 1.5px;
+}
+#button {
+  color: blue;
+  padding: 3px;
+  cursor: pointer;
+}
+#button:hover {
+  background-color: white;
+  color: #eb018a;
+  border-color: white;
+}
+a {
+  color: black;
+}
+a:hover {
+  color: darkblue;
+}
+/*.logo>img {
+  
+    margin-left: auto;
+    margin-right: auto;
+}
+
+*/
+/*.logo>p {
+    color: white;
+  position: relative;
+    text-align: center;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        color:white;
+
+
+}*/

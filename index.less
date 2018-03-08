@@ -1,0 +1,76 @@
+@pink :#eb018a;
+@white:white;
+@blue:#0caff2;
+@font1:"Campton Book","Helvetica Neue",Helvetica,Arial,sans-serif;
+@font2:"Kelson-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+.bgcolor(@a){
+    background-color: (@a);
+    
+}
+.marleft(@b)
+{
+    margin-left: (@b);
+}
+
+body
+{
+    background-color: @white;
+}
+
+#style{
+    .bgcolor(@pink);
+    margin-left: 200px;
+    margin-right: 200px;
+    form{
+        margin-top: 20px;
+        padding: 30px;
+        font-family: @font1;
+        .marleft(300px);
+        label{
+            font-family: @font2;
+            color:@white;
+            font-size: 16px;
+    
+        }
+    }
+   
+}
+h1{
+    text-transform: uppercase;
+        font-family: 'Questrial', sans-serif;
+    font-size: 18.4px;
+        color: #101010;
+    letter-spacing: 10px;
+    text-align: -webkit-center;
+    &:hover{
+        color:@pink;
+    }
+    }
+input,select{
+    font-stretch: 100%;
+    color: darkred;
+    background-color: white;
+    font-weight: 400;
+    margin-left: 10px;
+    border:10px;
+    padding:1.5px;
+}
+
+#button{
+    color: blue;
+    padding:3px;
+    cursor: pointer;
+    &:hover{
+        background-color: @white;
+        color:@pink;
+        
+        border-color: @white;
+    }
+}
+a{
+    color:black;
+    &:hover{
+        color: darkblue;
+    }
+}

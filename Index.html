@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Details-Entry</title>
+            <link rel="stylesheet" type="text/css" href="./index.css">
+
+    </head>
+<body>
+    <h1>&nbsp;Welcome to Exam Performance Assessment & Analysis(EPAA)</h1>
+    <div id="style">
+
+        <form id="form" name="form1" action="index.php" method="POST">
+            <label>FACULTY NAME</label><input name="facname" type="text"  id="facname" placeholder="Enter your name" label="facname" class="searchField" style="text-transform:capitalize" required title="Enter the name" /><br><br>
+		<label>PASSWORD</label><input name="facpass" type="password"  id="facpass" placeholder="Enter your password" label="facpass" class="searchField" style="text-transform:capitalize" required title="Enter the password" /><br><br>
+		
+         <label>  DEPARTMENT</label><select id="dept" title="Select the department">
+		   <option value="AERO">AERO</option>
+		   <option value="BME">BME</option>
+		   <option value="CIVIL">CIVIL</option>
+		   <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="E&I">E&I</option>
+            <option value="IT">IT</option>
+            <option value="MECH">MECH</option>
+		   </select><br><br>
+           <label>SECTION</label><select id="sec" title="Select the section">
+		   <option value="A">A</option>
+		   <option value="B">B</option>
+            <option value="C">C</option>
+		   </select>&nbsp;&nbsp;&nbsp;		   <label>YEAR</label><select id="year" title="Select the year of pursuing education">
+		   <option value="1">1</option>
+		   <option value="2">2</option>
+		   <option value="3">3</option>
+		   <option value="4">4</option>
+		   </select><br><br>
+		   <label>SUBJECT CODE</label><input name="SubCode" type="text"  id="SubCode" placeholder="Enter the subject code" label="SubCode" class="searchField" style="text-transform:capitalize" required title="Enter the Subject Code" /><br><br>
+		  <label> SUBJECT NAME</label><input name="SubName" type="text"  id="SubName" placeholder="Enter the subject name" label="SubName" class="searchField" style="text-transform:capitalize" required title="Enter the Subject Name" /><br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"  download="file.txt">Done </a><input type="button" onclick="call()" id="button" value="Submit" />
+            <br><br>
+            </form>
+            <form>
+            <label>SELECT THE TEST TYPE</label><br>
+            
+            <input type="radio" name="choice" onclick="displaytheory();"><label>Theory</label>
+            <input type="radio" name="choice" onclick="displayprac();"><label>Practicals</label>
+           <br><br>
+           <div id="theorydiv">
+            <label>SELECT </label>
+             <a href="Test.html">Test01</a>
+            <a href="Test.html">Test02</a>
+            <a href="obj.html">OBJ</a>
+             <a href="psr.html">PSR</a>
+           </div>
+           <div id="pracdiv">
+            <label>SELECT </label>
+             <a href="record.html">Record</a>
+            <a href="models.html">Models</a>
+           </div>
+
+        </form>
+
+        
+    </div>
+ 
+        <footer class="logo" style="background-color: grey; margin-left: 200px;margin-right: 200px">
+          <div id="down" style="margin-left: 450px">  
+            <p style="color: white">Developed by</p>
+            <img src="./ant1.png"/>
+             </div>
+        </footer>
+    
+    <script>
+        document.getElementById("theorydiv").style.display="none";
+        document.getElementById("pracdiv").style.display="none";
+    function displaytheory()
+    {
+        document.getElementById("theorydiv").style.display="block";
+        document.getElementById("pracdiv").style.display="none";
+    }
+    function displayprac(){
+        document.getElementById("theorydiv").style.display="none";
+        document.getElementById("pracdiv").style.display="block";
+    }
+    function call()
+    {
+    var subject=document.getElementById("SubCode").value;
+    var department=document.getElementById("dept").value;
+    var section=document.getElementById("sec").value;
+    var year=document.getElementById("year").value;
+    var group=department+section;
+        localStorage.setItem('subject',subject);
+        localStorage.setItem('class',group);
+        localStorage.setItem('year',year);
+        
+        
+    }
+</script>
+    
+    </body>
+</html>
+
+
+
+

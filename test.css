@@ -1,0 +1,210 @@
+h1{
+    padding-left: 5px;
+    text-transform: uppercase;
+  font-family: 'Questrial', sans-serif;
+  font-size: 21.4px;
+    color: #101010;
+    font-weight: 400;
+  letter-spacing: 19px;
+  text-align: -webkit-center;
+    
+
+}
+h1:hover
+{
+    color:deeppink;
+}
+body {
+    font-family: sans-serif;
+  background-color: white;
+}
+#qformat {
+  margin-left: 300px;
+  font-family: "Kelson-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 170px;
+  background-color: #eb018a;
+  margin-right: 290px;
+    font-size: 19px;
+}
+#qformat label,
+#qformat input {
+  margin-left: 50px;
+
+}
+#qnsubmit {
+  border-radius: 5px 5px 5px;
+  margin-bottom: 20px;
+    padding: 1px;
+    width:630px;
+    display: inline-block;
+    cursor: pointer;
+   height: 30px;
+    background-color: white;
+}
+#qnsubmit:hover{
+    color:deeppink;
+
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+#q1{
+    color:white;
+     display: inline-block;
+ 
+}
+#q2{
+    color:white;
+    display: inline-block;
+}
+#q3{
+    color:white;
+    margin-left: 430px;
+   position: absolute;
+   top:108px;
+}
+#lab{
+    margin-left:160px;
+}
+#main{
+    color:white;
+   padding: 1px;
+   
+    font-size: 19px;
+    left: 200px;
+    font-family: sans-serif;
+}
+#main:hover{
+    
+    
+text-shadow: 0 0 0.2em BLACK;
+}
+
+#Test01{
+font-size: 19px;    
+  margin-left: 300px;
+  font-family: "Kelson-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   color: white;
+  background-color: #eb018a;
+  margin-right: 290px;
+}
+#highco{
+ padding-top:12px;
+    bottom:20px;
+    align-content: center;
+    margin-left: 200px;
+    font-size: 19px;
+}
+.highco{
+  
+    top:20px;
+}
+
+#show1{
+    margin-top: 20px;
+border-radius: 5px 5px 5px;
+  margin-left: 50px;
+    padding: 1px;
+    width:630px;
+    display: inline-block;
+    cursor: pointer;
+   height: 30px;
+    background-color: white;
+}
+#show1:hover{
+        color:deeppink;
+
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+
+}
+#co{
+    margin-right: 120px;
+}
+#cohead{
+   margin-left:200px;
+}
+
+#content{
+    margin-left:100px;
+}
+#selectco{
+    margin-left: 20px;
+    border: 0;
+ background: white;
+ box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+
+ border-radius: 0px;
+    cursor:pointer;
+    color:blue;
+}
+
+
+#changable{
+    margin-left:270px;
+  font-family: "Kelson-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #eb018a;
+  margin-right: 290px;
+    font-size: 20px;
+}
+#changable label{
+    margin-left: 300px;
+    font-family: "Kelson-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 16px;
+    font-size: 17px;
+    
+    
+}
+#changable input{
+    color: darkblue;
+}
+#show2{
+  margin-bottom: 2px;
+    padding: 1px;
+    width:130px;
+    display: inline-block;
+    cursor: pointer;
+   height: 23px;
+    background-color: white;
+    margin-top: 5px;
+    margin-left: 330px;
+}
+#show2:hover{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color:darkblue;
+}
+a {
+  color: black;
+    
+}
+a:hover {
+  color: darkblue;
+}
+#show3{
+    cursor: pointer;
+margin-top: 10px;
+    margin-left: 150px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+#show4{
+    cursor: pointer;
+margin-top: 10px;
+    border: 0px;
+    margin-left: 190px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+#count:hover{
+    font-stretch: extra-expanded;
+    border-radius:0px;
+    color:darkblue;
+}
+
+#count{
+    cursor: pointer;
+margin-top: 10px;
+margin-left:350px;
+}
+#top{
+ 
+}

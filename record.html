@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RECORD MARK ENTRY</title>
+</head>
+<body>
+	<div id="noexps">
+		<label>No of Experiments</label>
+		<input type="number" name="no_of_exps" id="no_of_exps">
+		<br>
+		<input type="submit" name="submit_exps" onclick="generate()">
+	</div>
+	<div id="exp_area">
+		
+	</div>
+</body>
+</html>
+
+<script>
+function generate() {
+
+    var a = document.getElementById("no_of_exps").value;
+    var ch = document.getElementById("exp_area");
+
+    for (i = 0; i < a; i++) {
+        var input = document.createElement("input");
+        var value = document.createElement("label");
+        var text = document.createTextNode("Experiment No:"+(i+1));
+        var space = document.createElement("br");
+        input.type="number";
+        input.id="exp_no"+(i+1);
+        value.appendChild(text);
+        ch.appendChild(value);
+        ch.appendChild(input);
+        ch.appendChild(space);
+    }
+}
+</script>
